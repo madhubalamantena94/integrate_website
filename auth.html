@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Two Step Authentication</title>
+	<!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/site.webmanifest">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- <script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script> -->
+
+	<style type="text/css">
+		body {
+			font-family: 'Verdana';
+			font-size: 16px;
+			font-weight: bold;
+			background-color: #cff4fc;
+		}
+
+		.panel {
+			border: 0;
+		}
+
+		form {
+			padding: 0 10px;
+
+		}
+
+		.addon-diff-color {
+			background-color: #f0ad4e;
+			color: white;
+		}
+
+		.panel-title {
+			color: #f0ad4e;
+			font-weight: bolder;
+		}
+
+		.sign-up,
+		.forgot-pass {
+			display: none;
+		}
+
+		.alert,
+		#loader {
+			display: none;
+		}
+
+
+		.logo-container {
+			background-color: #ffd867;
+		}
+
+		.logo-container img {
+			max-width: 500px;
+		}
+
+		.login-container {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			height: 100vh;
+			width: 100vw;
+		}
+
+		.vertical-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.row {
+			margin-right: -120px;
+			margin-left: -120px;
+		}
+
+		@media (max-width: 1200px) {
+			.logo-container {
+				display: none;
+			}
+
+			.login-container {
+				display: flex;
+				/* grid-template-columns: 100%; */
+				height: 100vh;
+				width: 100vw;
+				justify-content: center;
+			}
+
+			.vertical-center {
+				width: 40vw;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+
+
+
+
+
+
+			$('#acode').keyup(function() {
+				// var regexp = new RegExp(/^[a-zA-Z]+$/);
+				var regexp = /^[0-9]{6}$/;
+				if (regexp.test($('#acode').val())) {
+					$('#acode').closest('.form-group').removeClass('has-error');
+					$('#acode').closest('.form-group').addClass('has-success');
+				} else {
+					$('#acode').closest('.form-group').addClass('has-error');
+				}
+			})
+
+
+
+			$('#authcode').click(function(event) {
+
+				document.location = 'welcome.php';
+			})
+
+
+
+		})
+	</script>
+</head>
+
+<body>
+	<div class="login-container">
+		<div class="logo-container vertical-center">
+			<img src="img/Two-factor-authentication.gif" alt="" />
+			<!-- <img src="img/logo.png" alt="" /> -->
+		</div>
+		<div class=" vertical-center text-center">
+			<div class="container">
+				<h2 class="text-center" style="font-weight:bold;">Digital Library with Wiki Cards</h2>
+				<h3 class="text-center">CS518 Webprogramming Project</h3>
+				<hr>
+				<div class="row row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">x</button>
+							<div id="result"></div>
+						</div>
+
+					</div>
+
+
+					<div class="col-md-6 col-md-offset-3 two-auth">
+						<div class="panel">
+							<div class="panel-heading">
+								<h3 class="panel-title text-center">Two Step Authentication</h3>
+
+							</div>
+							<div class="panel-body">
+								<form id="auth-frm" role="form" method="post" action="" class="form-horizontal">
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon addon-diff-color">
+
+											</div>
+											<input type="text" class="form-control" id="acode" name="acode" placeholder="Enter 6 digit Code Here">
+										</div>
+									</div>
+									<div class="form-group">
+										<!--<input type="submit" value="Submit" class="btn btn-warning btn-block" id="authcode" name="authcode"> -->
+										<a href="#" onClick="window.location.href = 'signup.html';"> <input type=" submit"  value="Login" class="btn btn-warning btn-block" id="login" name="login"></a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</body>
+
+</html>

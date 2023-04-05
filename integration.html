@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap- 
+datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+  <title>Welcome to Integration Services</title>
+  <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+
+  <style type="text/css">
+    body {
+      font-size: 20px;
+      line-height: 1.5;
+      background-color: #fff3cd;
+
+    }
+
+    .glyphiconuser {
+      font-size: 20px;
+      color: black;
+    }
+
+    .vertical-center {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    body {
+      margin-top: 20px;
+    }
+
+    /* Feature Box
+---------------------*/
+    .feature-box-1 {
+      padding: 32px;
+      box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+      margin: 15px 0;
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      -moz-transition: ease all 0.35s;
+      -o-transition: ease all 0.35s;
+      -webkit-transition: ease all 0.35s;
+      transition: ease all 0.35s;
+      top: 0;
+    }
+
+    .feature-box-1 * {
+      -moz-transition: ease all 0.35s;
+      -o-transition: ease all 0.35s;
+      -webkit-transition: ease all 0.35s;
+      transition: ease all 0.35s;
+    }
+
+    .feature-box-1 .icon {
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      background: #fc5356;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 50%;
+      margin-bottom: 22px;
+      font-size: 27px;
+    }
+
+    .feature-box-1 .icon i {
+      line-height: 70px;
+    }
+
+    .feature-box-1 h5 {
+      color: #20247b;
+      font-weight: 600;
+    }
+
+    .feature-box-1 p {
+      margin: 0;
+    }
+
+    .feature-box-1:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      border-radius: 10px;
+      width: 0;
+      background: #20247b;
+      z-index: -1;
+      -moz-transition: ease all 0.35s;
+      -o-transition: ease all 0.35s;
+      -webkit-transition: ease all 0.35s;
+      transition: ease all 0.35s;
+    }
+
+    .feature-box-1:hover {
+      top: -5px;
+    }
+
+    .feature-box-1:hover h5 {
+      color: #ffffff;
+    }
+
+    .feature-box-1:hover p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .feature-box-1:hover:after {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      left: 0;
+      right: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-title {
+      padding-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-weight: 700;
+      color: #20247b;
+      font-size: 45px;
+      margin: 0 0 15px;
+      border-left: 5px solid #fc5356;
+      padding-left: 15px;
+    }
+  </style>
+
+  <script type="text/javascript">
+  </script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="welcome.php" style="font-weight:bold;">Integration</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
+
+        <ul class="navbar-nav text-white">
+          <!-- <li class=" nav-item">
+          <a href="index.php" class="nav-link text-decoration-none" style="color:white; font-weight:bold;">Login</a>
+          </li> -->
+          <li class="nav-item"><a class="nav-link" href="edit_profile.php" style="color: white;">Edit Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="ureset.php" style="color: white;">Change Password</a></li>
+          <li class="nav-item" role="separator" class="divider"></li>
+          <li class="nav-item"><a class="nav-link" href="logout.php" style="color: white;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container">
+    <h2 class="mt-5 text-center">Welcome <strong>Madhubala</strong> !</h2><br>
+    <div class="row">
+      <div class="col-md-12 col-md-offset-3">
+        <div class="row">
+
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+          <section class="section services-section" id="services">
+            <div class="container">
+              
+              <div class="row">
+                <!-- feaure box -->
+                <div class="col-sm-6 col-lg-4">
+                  <a href="services-home-page.html" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Data Integration</h5>
+                        <p>Data integration is the process of combining data from different sources into a single, unified view.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+				<div class="col-sm-6 col-lg-4">
+                  <a href="monitor.html" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-crosshairs" aria-hidden="true"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Application Integration</h5>
+                        <p>Application integration is the process of combining data from different applications using APIs.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+				<div class="col-sm-6 col-lg-4">
+                  <a href="user-admin-console.html" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Administrator</h5>
+                        <p>User and Access management for Integration Services are performed in the Administrator service.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+				<div class="col-sm-6 col-lg-4">
+                  <a href="monitor.html" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-desktop"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Monitor</h5>
+                        <p>You can monitor all running jobs and tasks on the Running Jobs page in Monitor.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+				<div class="col-sm-6 col-lg-4">
+                  <a href="edit_profile.php" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Data Quality</h5>
+                        <p>Data Quality is the process of profiling the data to understand the meta data information.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+				<div class="col-sm-6 col-lg-4">
+                  <a href="edit_profile.php" target="_blank" style="text-decoration: none;color: black;">
+
+                    <div class="feature-box-1">
+                      <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <div class="feature-content">
+                        <h5>Customer Support</h5>
+                        <p>Data transformation is the process of wrangling the data to clean and map to diverse sources.</p>
+                      </div>
+                    </div>
+
+                  </a>
+                </div>
+
+               
+                
+            
+              
+              
+            </div>
+        </div>
+        </section>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+ 
+  </div>
+  </div>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
